@@ -1,0 +1,91 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header.hero {
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Highlighted Name */
+.highlight {
+  color: #ffe600;
+}
+
+/* Profile Picture (No animation, no blur) */
+.profile-pic {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 999;
+}
+
+/* Typing Animation Text */
+.typewriter {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffe600;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ffe600;
+  max-width: 100%;
+  min-height: 2rem;
+}
+
+/* Blink Cursor */
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #ffe600; }
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 70px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .typewriter {
+    font-size: 1.2rem;
+  }
+
+  header.hero {
+    padding: 3rem 1rem;
+  }
+}

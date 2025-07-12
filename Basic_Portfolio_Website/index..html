@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Awais Altaf - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .highlight {
+      color: #ffe600;
+    }
+
+    .profile-pic {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      z-index: 999;
+    }
+
+    .typewriter {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #ffe600;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #ffe600;
+      max-width: 100%;
+      min-height: 2rem;
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #ffe600; }
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 0.5rem 0;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #007bff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #007bff;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #007bff;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .profile-pic {
+        width: 70px;
+        top: 15px;
+        right: 15px;
+      }
+
+      .typewriter {
+        font-size: 1.2rem;
+      }
+
+      header.hero {
+        padding: 3rem 1rem;
+      }
+    }
+      .resume {
+      text-align: center;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #ffe600;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+</style>
+</head>
+<body>
+  <header class="hero">
+    <img src="pic.jpg" alt="Muhammad Awais Altaf" class="profile-pic" />
+    <h1>Hello, I'm <span class="highlight">Muhammad Awais Altaf</span></h1>
+    <p><span class="typewriter" id="typing"></span></p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I am passionate about building amazing websites and learning new technologies. This is my first portfolio website, and I'm excited to keep improving!</p>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Personal Portfolio Website</li>
+      <li>To-Do List App (Coming Soon)</li>
+      <li>Weather App (Coming Soon)</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: awais@example.com</p>
+  </section>
+
+  <section class="links">
+    <h2>Links</h2>
+    <a href="https://www.linkedin.com/in/muhammad-awais-altaf-314167329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+      🔗 LinkedIn Profile
+    </a>
+    <a href="https://github.com/awaisaltaf5" target="_blank">
+      💻 GitHub Profile
+    </a>
+  </section>
+
+  <section class="resume">
+    <h2>Resume</h2>
+    <a href="Awais.pdf" class="resume-btn" download title="Download Resume">⬇️ Download Resume</a>
+
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Muhammad Awais Altaf</p>
+  </footer>
+
+  <script>
+    const roles = [
+      "Software Engineering Student",
+      "Frontend Web Developer",
+      "Full-Stack Web Developer",
+      "UI/UX Enthusiast",
+      "Creative Problem Solver"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById("typing");
+
+    function type() {
+      const currentRole = roles[index];
+
+      if (!isDeleting && charIndex <= currentRole.length) {
+        typingElement.textContent = currentRole.substring(0, charIndex++);
+      } else if (isDeleting && charIndex > 0) {
+        typingElement.textContent = currentRole.substring(0, charIndex--);
+      }
+
+      if (!isDeleting && charIndex === currentRole.length + 1) {
+        isDeleting = true;
+        setTimeout(type, 1500);
+        return;
+      }
+
+      if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        index = (index + 1) % roles.length;
+      }
+
+      setTimeout(type, isDeleting ? 80 : 150);
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+</body>
+</html>
