@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Job Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1 class="fade-in">🚀 Apply for Your Dream Tech Role</h1>
+
+    <form id="jobApplicationForm" class="fade-slide">
+      <div class="form-group">
+        <label for="name">👤 Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">📧 Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+
+      <fieldset class="form-group">
+        <legend>⚧ Gender:</legend>
+        <label><input type="radio" name="gender" value="Male" required /> Male</label>
+        <label><input type="radio" name="gender" value="Female" /> Female</label>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="job">💼 Choose Your Role:</label>
+        <select id="job" name="job" required>
+          <option value="" disabled selected>-- Select a role --</option>
+          <option value="Web Developer">Web Developer</option>
+          <option value="Android Developer">Android Developer</option>
+          <option value="Data Scientist">Data Scientist</option>
+          <option value="Software Engineer">Software Engineer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cover">📝 Cover Letter:</label>
+        <textarea id="cover" name="cover" rows="5" placeholder="Tell us why you're a great fit!" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="resume">📄 Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="subscribe" name="subscribe" />
+          📬 Email me confirmation
+        </label>
+      </div>
+
+      <button type="submit">🚀 Submit</button>
+    </form>
+  </main>
+
+  <!-- Beautiful Animated Popup -->
+  <div id="popupOverlay">
+    <div class="popupBox">
+      <h2>🎉 Submission Successful</h2>
+      <p>Your application has been submitted. We’ll get back to you soon!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

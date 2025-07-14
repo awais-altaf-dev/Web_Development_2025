@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for job application</title>
+</head>
+
+<body>
+    <h1> Form for job application</h1>
+    <form action="post">
+        <div><label for="username">Name:</label>
+            <input type="text" name="username" id="username" placeholder="Enter your name" autofocus>
+            <required>
+        </div>
+        <div><input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email" required>
+
+            </div>
+
+            <label for="subscribe">Subscribe to receive the confirmation email:</label>
+            <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+        </div>
+        <div>
+            <label for="job">Select Job Type:</label>
+            <select name="Job" id="job">
+                <option value="Android Developer">Android Developer</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="System Administrator">System Administrator</option>
+            </select>
+            <div>
+                <label for="coverletter">Write your cover letter here:</label>
+                <textarea name="coverletter" id="coverletter"></textarea>
+            </div>
+    </form>
+
+</body>
+
+</html>
